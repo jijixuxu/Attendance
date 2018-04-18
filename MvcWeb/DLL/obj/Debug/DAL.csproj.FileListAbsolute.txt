@@ -1,0 +1,10 @@
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\DLL\bin\Debug\DLL.dll
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\DLL\bin\Debug\DLL.pdb
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\DLL\obj\Debug\DLL.dll
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\DLL\obj\Debug\DLL.pdb
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\DLL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\DLL\bin\Debug\DLL.dll
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\DLL\bin\Debug\DLL.pdb
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\DLL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\DLL\obj\Debug\DLL.dll
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\DLL\obj\Debug\DLL.pdb

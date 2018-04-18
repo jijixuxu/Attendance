@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "网站后台";
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>考勤签到系统</title>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/css.css" />
+    <script type="text/javascript" src="~/Content/js/jquery1.9.0.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/sdmenu.js"></script>
+    <script type="text/javascript" src="~/Content/js/laydate/laydate.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo"><br /><span style="font-size:20px;font-weight:bold;color:white;">&nbsp;&nbsp;&nbsp;考勤签到系统</span></div>
+        <div class="header-right">
+            <i class="icon-user icon-white"></i> <a href="#">@Session["UserName"]</a> <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">注销</a>
+            <div id="modal-container-973558" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:300px; margin-left:-150px; top:30%">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">
+                        注销系统
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        您确定要注销退出系统吗？
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button> <a class="btn btn-primary" style="line-height:20px;" href="/Admin/Login">确定退出</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 顶部 -->
+
+    <div id="middle">
+        <div class="left">
+            <script type="text/javascript">
+                var myMenu;
+                window.onload = function () {
+                    myMenu = new SDMenu("my_menu");
+                    myMenu.init();
+                };
+            </script>
+            <div id="my_menu" class="sdmenu">
+                <div>
+                    <span>用户管理</span>
+                    <a href="/Users/UpdatePassWord">修改密码</a>
+                    <a href="/Users/UsersEdit">添加用户</a>
+                    <a href="/Users/UsersList">用户列表</a>
+                </div>
+                <div class="collapsed">
+                    <span>课程管理</span>
+                    <a href="/Coures/CouresEdit">添加课程</a>
+                    <a href="/Coures/CouresList">课程列表</a>
+                </div>
+                <div class="collapsed">
+                    <span>考勤管理</span>
+                    <a href="/Attendance/AttendanceEdit">添加考勤</a>
+                    <a href="/Attendance/AttendanceList">考勤列表</a>
+                </div>
+                <div class="collapsed">
+                    <span>请假管理</span>
+                    <a href="/Forleave/ForleaveEdit">添加请假</a>
+                    <a href="/Forleave/ForleaveList">请假列表</a>
+                </div>
+            </div>
+        </div>
+        <div class="Switch"></div>
+        <script type="text/javascript">
+            $(document).ready(function (e) {
+                $(".Switch").click(function () {
+                    $(".left").toggle();
+                });
+            });
+        </script>
+        @RenderBody()
+    </div>
+
+    <!-- 底部 -->
+    <div id="footer">版权所有：考勤签到系统 &copy; 2018</div>
+
+    <script>
+        !function () {
+            laydate.skin('molv');
+            laydate({ elem: '#Calendar' });
+            laydate.skin('molv');
+            laydate({ elem: '#Calendar2' });
+        }();
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "AttendanceEdit";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+@model MvcModel.attendanceData
+
+<div class="right" id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>考勤编辑
+        </ul>
+        <div class="title_right"><strong>考勤编辑</strong></div>
+        <div style="width:900px; margin:auto">
+            @using (Html.BeginForm("AttendanceEdit", "Attendance", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                <table class="table table-bordered">
+                  <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">用户账号：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.userid, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.userid)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">签到时间：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.checktime, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.checktime)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">签到地点：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.checkaddress, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.checkaddress)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">签到方式：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.checktype, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.checktype)</span>
+                    </tr>
+                     
+                </table>
+                <table class="margin-bottom-20 table  no-border">
+                    <tr>
+                        <td class="text-center">
+                            <input type="submit" value="确定" class="btn btn-info " style="width:80px;" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+</div>

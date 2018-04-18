@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\Model\bin\Debug\Model.dll
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\Model\bin\Debug\Model.pdb
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\Model\obj\Debug\Model.dll
+C:\Users\Administrator\Desktop\新实体类生成器\0001号模版（MVC）\MvcWeb\Model\obj\Debug\Model.pdb

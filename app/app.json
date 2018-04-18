@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/timecard/normal/normal",
+    "pages/timecard/history/history",
+    "pages/overwork/create/create",
+    "pages/center/center",
+    "pages/course/course",
+    "pages/forleave/forleave"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#006df0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/timecard/normal/normal",
+        "iconPath": "image/icon_CSR.png",
+        "selectedIconPath": "image/icon_CSR_HL.png",
+        "text": "签到"
+      },
+      {
+        "pagePath": "pages/overwork/create/create",
+        "iconPath": "image/icon_CWS.png",
+        "selectedIconPath": "image/icon_CWS_HL.png",
+        "text": "考勤"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_settings.png",
+        "selectedIconPath": "image/icon_settings_HL.png",
+        "text": "设置"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "UsersEdit";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+@model MvcModel.usersData
+
+<div class="right" id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>用户编辑
+        </ul>
+        <div class="title_right"><strong>用户编辑</strong></div>
+        <div style="width:900px; margin:auto">
+            @using (Html.BeginForm("UsersEdit", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                <table class="table table-bordered">
+                    <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">账号：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.userid, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.userid)</span>
+                        <td width="12%" align="right" bgcolor="#f1f1f1">密码：</td>
+                        <td>
+                            @Html.TextBoxFor(model => model.userpwrd, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.userpwrd)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">姓名：</td>
+                        <td>
+                            @Html.TextBoxFor(model => model.username, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.username)</span>
+                        </td>
+                        <td align="right" bgcolor="#f1f1f1">级别：</td>
+                        <td>
+                            <select name="usertype">
+                                <option value="管理员">管理员</option>
+                                <option value="普通用户">普通用户</option>
+                            </select>
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.usertype)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" nowrap="nowrap" bgcolor="#f1f1f1">备注：</td>
+                        <td colspan="3"><textarea name="txtmemos" class="span10"></textarea></td>
+                    </tr>
+                </table>
+                <table class="margin-bottom-20 table  no-border">
+                    <tr>
+                        <td class="text-center">
+                            <input type="submit" value="确定" class="btn btn-info " style="width:80px;" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+</div>

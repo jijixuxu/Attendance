@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "CouresEdit";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+@model MvcModel.couresData
+
+<div class="right" id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>课程编辑
+        </ul>
+        <div class="title_right"><strong>课程编辑</strong></div>
+        <div style="width:900px; margin:auto">
+            @using (Html.BeginForm("CouresEdit", "Coures", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                <table class="table table-bordered">
+                  <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">课程名称：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.coursename, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.coursename)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">任课老师：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.theter, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.theter)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">上课地点：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.theaddress, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.theaddress)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">上课时间：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.thetime, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.thetime)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">学时：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.thexs, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.thexs)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">学分：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.thexf, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.thexf)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">说明：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.memos, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.memos)</span>
+                    </tr>
+                     
+                </table>
+                <table class="margin-bottom-20 table  no-border">
+                    <tr>
+                        <td class="text-center">
+                            <input type="submit" value="确定" class="btn btn-info " style="width:80px;" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+</div>

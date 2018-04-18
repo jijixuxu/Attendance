@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "UsersList";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+@model System.Data.DataTable
+
+<div class="right" id="mainFrame">
+
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>
+            用户列表
+        </ul>
+
+        <table class="table table-bordered table-striped table-hover">
+            <tbody>
+                <tr align="center">
+                    <td nowrap="nowrap"><strong>账号</strong></td>
+                    <td nowrap="nowrap"><strong>密码</strong></td>
+                    <td nowrap="nowrap"><strong>姓名</strong></td>
+                    <td nowrap="nowrap"><strong>级别</strong></td>
+                    <td width="80" nowrap="nowrap"><strong> 操作 </strong></td>
+                </tr>
+                @foreach (System.Data.DataRow dr in Model.Rows)
+                {
+                    <tr align="center">
+                        <td nowrap="nowrap">@dr["userid"] </td>
+                        <td nowrap="nowrap">@dr["userpwrd"]</td>
+                        <td nowrap="nowrap"> @dr["username"]</td>
+                        <td nowrap="nowrap">@dr["usertype"]</td>
+                        <td nowrap="nowrap">
+                            @Html.ActionLink("编辑", "UsersEdit", new { id = @dr["id"] })
+                            @Html.ActionLink("删除", "UsersDelete", new { id = @dr["id"] })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

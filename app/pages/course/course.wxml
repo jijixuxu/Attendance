@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-form-preview">
+
+      <view wx:for="{{array}}">
+        <view class="weui-form-preview__hd">
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">课程名称</view>
+            <view class="weui-form-preview__value">{{item.coursename}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">任课老师</view>
+            <view class="weui-form-preview__value">{{item.theter}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">上课地点</view>
+            <view class="weui-form-preview__value">{{item.theaddress}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">上课时间</view>
+            <view class="weui-form-preview__value">{{item.thetime}}</view>
+          </view>
+           <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">学时</view>
+            <view class="weui-form-preview__value">{{item.thexs}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">学分</view>
+            <view class="weui-form-preview__value">{{item.thexf}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">说明</view>
+            <view class="weui-form-preview__value">{{item.memos}}</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

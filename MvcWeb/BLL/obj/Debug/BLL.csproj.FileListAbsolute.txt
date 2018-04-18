@@ -1,0 +1,7 @@
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\bin\Debug\BLL.dll
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\bin\Debug\BLL.pdb
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\bin\Debug\DLL.dll
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\bin\Debug\DLL.pdb
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\obj\Debug\BLL.dll
+D:\HX\学习\2016\(mvc)记生活网站\MvcWeb\BLL\obj\Debug\BLL.pdb

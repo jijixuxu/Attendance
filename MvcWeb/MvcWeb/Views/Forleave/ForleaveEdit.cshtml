@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "ForleaveEdit";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+@model MvcModel.forleaveData
+
+<div class="right" id="mainFrame">
+    <div class="right_cont">
+        <ul class="breadcrumb">
+            当前位置：
+            <a href="#">首页</a>
+            <span class="divider">/</span>请假编辑
+        </ul>
+        <div class="title_right"><strong>请假编辑</strong></div>
+        <div style="width:900px; margin:auto">
+            @using (Html.BeginForm("ForleaveEdit", "Forleave", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.ValidationSummary(true)
+                <table class="table table-bordered">
+                  <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">用户账号：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.userid, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.userid)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">申请时间：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.thetime, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.thetime)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">起始时间：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.starttime, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.starttime)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">结束时间：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.endtime, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.endtime)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">请假种类：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.thetype, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.thetype)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">请假说明：</td>
+                        <td width="38%">
+                            @Html.TextBoxFor(model => model.memos, new { @class = "span1-1" })
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.memos)</span>
+                    </tr>
+                     <tr>
+                        <td width="12%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">状态：</td>
+                        <td width="38%">
+                            <select name="status">
+                                <option value="同意">同意</option>
+                                <option value="驳回">驳回</option>
+                            </select>
+                            <span style="color:red;">@Html.ValidationMessageFor(model => model.status)</span>
+                    </tr>
+                     
+                </table>
+                <table class="margin-bottom-20 table  no-border">
+                    <tr>
+                        <td class="text-center">
+                            <input type="submit" value="确定" class="btn btn-info " style="width:80px;" />
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
+    </div>
+</div>

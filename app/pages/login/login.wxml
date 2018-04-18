@@ -1,0 +1,19 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!--pages/user/user.wxml-->
+  <view class="container">
+    <view class="form-wrap">
+      <text class="hint">登录</text>
+      <view class="flex-wrap input-wrap">
+        <text class="label">用户名</text>
+        <input name="userid" class="account-info-input" />
+      </view>
+      <view class="flex-wrap input-wrap">
+        <text class="label">密码</text>
+        <input name="userpwrd" class="account-info-input" />
+      </view>
+      <view class="btn-area" id="buttonContainer">
+        <button class="submit" form-type="submit" type="primary">登录</button>
+      </view>
+    </view>
+  </view>
+</form>
