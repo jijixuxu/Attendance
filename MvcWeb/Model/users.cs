@@ -1,5 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+/*
+ä»¥ä¸Šä¸ºå¤´æ–‡ä»¶éªŒè¯ï¼Œä¸‹é¢ä»£æ›¿ js ä»£ç 
+*/
 
 namespace MvcModel
 {
@@ -17,21 +20,21 @@ namespace MvcModel
             set { this.m_Id = value; }
         }
 
-        [Required(ErrorMessage = "´ËÏî²»ÄÜÎª¿Õ!")]
+        [Required(ErrorMessage = "æ­¤é¡¹ä¸èƒ½ä¸ºç©º!")]
         public string userid
         {
             get { return this.m_userid; }
             set { this.m_userid = value; }
         }
 
-        [Required(ErrorMessage = "´ËÏî²»ÄÜÎª¿Õ!")]
+        [Required(ErrorMessage = "æ­¤é¡¹ä¸èƒ½ä¸ºç©º!")]
         public string userpwrd
         {
             get { return this.m_userpwrd; }
             set { this.m_userpwrd = value; }
         }
 
-        [Required(ErrorMessage = "´ËÏî²»ÄÜÎª¿Õ!")]
+        [Required(ErrorMessage = "æ­¤é¡¹ä¸èƒ½ä¸ºç©º!")]
         public string username
         {
             get { return this.m_username; }
