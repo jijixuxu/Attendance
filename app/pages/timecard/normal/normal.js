@@ -1,4 +1,4 @@
-// pages/timecard/normal/normal.js
+// pages/timecard/normal/normal.js 签到页面
 //获取应用实例
 var app = getApp()
 var util = require('../../../utils/util.js')
