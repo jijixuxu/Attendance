@@ -100,7 +100,8 @@ Page({
     var toastTitle = ['定位成功', 'Got Location', '取得完了'][selectedLanguage];
     var that = this;
     var ui = that.data.UI
-    var amap = new amapFile.AMapWX({ key: '8ebbe699d71eed6674889848604e411a' });
+    var amap = new amapFile.AMapWX({ key: '8ebbe699d71eed6674889848604e411a' }); //接入高德地图api（逆地理编码：http://lbs.amap.com/api/wx/guide/get-data/regeo）
+    
 
     amap.getRegeo({
       success: function (data) {
