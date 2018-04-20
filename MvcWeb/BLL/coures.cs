@@ -55,7 +55,7 @@ objDB.Command.Parameters.AddWithValue("@thexs",datcoures.thexs);
 objDB.Command.Parameters.AddWithValue("@thexf",datcoures.thexf);
 objDB.Command.Parameters.AddWithValue("@memos",datcoures.memos);
 objDB.Command.Parameters.AddWithValue("@Id", datcoures.Id);
-iRel = objDB.Command.ExecuteNonQuery();
+iRel = objDB.Command.ExecuteNonQuery(); //返回受影响的行数
 }
 catch (Exception ex)
 {iRel = -1;}
