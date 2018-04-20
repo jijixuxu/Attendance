@@ -1,5 +1,5 @@
 using System;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations; //验证js
 namespace MvcModel
 {
 public class attendanceData
