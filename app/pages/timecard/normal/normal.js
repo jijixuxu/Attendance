@@ -2,7 +2,7 @@
 //获取应用实例
 var app = getApp()
 var util = require('../../../utils/util.js')
-var amapFile = require('../../../utils/amap-wx.js');
+var amapFile = require('../../../utils/amap-wx.js'); //1. 引入 amap-wx.js 
 
 const AV = require('../../../utils/av-weapp-min');
 const Check = require('../../../model/check')
