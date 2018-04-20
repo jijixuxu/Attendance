@@ -10,7 +10,7 @@ namespace Business
 public class coures
 {public bool Insert(MvcModel.couresData datcoures)
 {
-int iRel = -1;
+int iRel = -1;//不受影响 -1
 bool bRel = false;
 DataAccess.CommonDB objDB = new DataAccess.CommonDB();
 try
@@ -130,7 +130,7 @@ return datcoures;
 }
 public MvcModel.couresData SelectData(string casestr)
 {
-int iRel = -1;
+int iRel = -1;//-1表示初始状态 不受影响
 DataAccess.CommonDB objDB = new DataAccess.CommonDB();
 MvcModel.couresData datcoures = new MvcModel.couresData();
 string sql = "select * from coures where 1= 1  ";
